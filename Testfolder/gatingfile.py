@@ -1,19 +1,25 @@
 import pandas as pd
 import sys
 
+print("Python gating file started")
+
+print("\n" + "="*50)
+print("PERFORMANCE GATE REPORT")
+print("="*50)
+
 # ---------------------
 # THRESHOLDS
 # ---------------------
 
-AVG_RESPONSE_TIME_MS = 500
-P95_RESPONSE_TIME_MS = 1000
-MAX_ERROR_RATE = 1.0
+AVG_RESPONSE_TIME_MS = 100
+P95_RESPONSE_TIME_MS = 500
+MAX_ERROR_RATE = 0.2
 
 # ---------------------
 # READ JTL FILE
 # ---------------------
 
-df = pd.read_csv("results.jtl")
+df = pd.read_csv(r"D:\Git_PT\pro1\Testfolder\results.jtl")
 
 total_requests = len(df)
 
